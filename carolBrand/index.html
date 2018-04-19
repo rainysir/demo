@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;text-decoration:none;}
+body{font:12px/180% Arial;background:#333;}
+.brand a{
+	display: block;
+	float: left;
+	margin: 20px;
+	width: 180px;
+	height: 240px;
+	text-align: center;
+	position: relative;
+}
+.brand .flip_bg,.brand img{
+	width: 180px;
+	height: 240px;
+	display: inline-block;
+}
+.brand .info{
+	display: none;
+	background-color: #f0f0f0;
+	color: #369242;
+	line-height:240px;
+}
+.horizontal .info{
+	width: 0;
+	height: 240px;
+	margin: 0 auto;
+}
+.vertical .flip_bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.vertical .info{
+	width: 180px;
+	height: 0;
+	top: 120px;
+	position: absolute;
+	left: 0;
+}
+</style>
+
+<div style="width:660px;margin:0 auto;">
+
+	<div id="wrap" class="brand">
+		<a class='flip_wrap' target="_blank" href="javascript:;"><div class="flip_bg"><img alt="" src="http://static.nearfuture.cn/67c96260d3d80ebcf184fd1479efb90f.jpg" /></div><div class="info">1</div></a>
+		<a class='flip_wrap' target="_blank" href="javascript:;"><div class="flip_bg"><img alt="" src="http://static.nearfuture.cn/67c96260d3d80ebcf184fd1479efb90f.jpg" /></div><div class="info">2</div></a>
+		<a class='flip_wrap' target="_blank" href="javascript:;"><div class="flip_bg"><img alt="" src="http://static.nearfuture.cn/67c96260d3d80ebcf184fd1479efb90f.jpg" /></div><div class="info">3</div></a>
+	</div>
+
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+(function($) {
+	$.fn.flip = function(opt) {
+		var a = $(this);
+		var o = $.extend({
+			width: '0',
+			height: '0',
+			style: 'horizontal',
+			time: '200',
+			unbind: false,
+			onStart: function(o) {
+
+			},
+			onEnd: function(o) {
+
+			}
+		}, opt);
+
+		a.addClass(o.style)
+
+		var turnStyle = {
+			horizontal: [{
+				'width': 0
+			}, {
+				'width': o.width + 'px'
+			}],
+			vertical: [{
+				'height': 0,
+				'top': (o.height) / 2 + 'px'
+			}, {
+				'height': o.height + 'px',
+				'top': 0
+			}]
+		}[o.style]
+
+		a.find('.flip_wrap').click(function() {
+			var b = $(this),
+				c = $(this).next();
+			o.onStart(c);
+			b.find('.flip_bg,img').stop().animate(turnStyle[0], Number(o.time), function() {
+				var d = $(this);
+				d.hide().next().show();
+				d.next().animate(turnStyle[1], Number(o.time));
+				o.onEnd(c);
+				o.unbind && a.find('.flip_wrap').unbind('click');
+			});
+		});
+
+	}
+})(jQuery);
+
+$('#wrap').flip({
+	//翻转元素宽高
+	width:'180',
+	height:'240',
+	//翻转方式 horizontal 水平 vertical 垂直
+	style:'horizontal',
+	//翻转时间
+	time:'200',
+	//翻转后是否移除事件默认false
+	// unbind:true,
+	//翻转前回调 卡罗牌反面返回对象o
+	onStart:function(o){
+
+	},
+	//翻转后回调
+	onEnd:function(o){
+
+	}
+});
+</script>
+</body>
+</html>
