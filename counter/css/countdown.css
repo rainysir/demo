@@ -1,0 +1,19 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style:none;}
+
+#hero_outer{width:620px;height:400px;overflow:hidden;margin:50px auto;background:#222 url('../images/new_index_countdown_hero.jpg') 0 0 no-repeat;position:relative;}
+
+
+/* flip-counter */
+.flip-counter{position:absolute;top:171px;left:250px;}
+.flip-counter ul.cd{float:left;list-style-type:none;margin:0;padding:0;}
+.flip-counter li{background:url('../images/digits_small.png') 0 0 no-repeat;}
+@media (-webkit-min-device-pixel-ratio: 2), (-min-resolution: 2dppx){
+	.flip-counter li{background-image:url('../images/digits_small@2x.png');	background-size:120px 400px;}
+}
+.flip-counter li.date_separate{width:11px;height:40px;background:none;}
+.flip-counter li.t{background-position:0 0;width:30px;height:20px}
+.flip-counter li.b{background-position:0 0;width:30px;height:20px}
+#title,#title_end{color:#fff;position: absolute;font: 30px/1 "楷体";}
+#title{top: 88px;left: 60px;}
+#title_end{bottom: 88px;right: 60px;}

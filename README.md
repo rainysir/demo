@@ -12,3 +12,5 @@ demo合集
                   
 5、./lottery 刮奖特效 [点击查看](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/lottery/index.html)
 
+5、./counter 计时器 [点击查看](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/counter/index.html)
+
