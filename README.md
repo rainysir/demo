@@ -5,3 +5,5 @@ demo合集
 
 2、./timeSelect 移动端datepicker（转） [点击查看](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/timeSelect/index.html)
 
+3、./loading loading效果 [点击查看](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/loading/index.html)
+
