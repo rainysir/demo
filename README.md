@@ -7,3 +7,6 @@ demo合集
 
 3、./loading loading效果 [点击查看](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/loading/index.html)
 
+4、./wx_yao 摇一摇 [点击查看demo1](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/wx_yao/demo_01/index.html)
+                  [点击查看demo2](https://htmlpreview.github.io/?https://github.com/rainysir/demo/blob/master/wx_yao/demo_02/index.html)
+

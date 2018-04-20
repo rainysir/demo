@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>html5手机微信摇一摇特效</title>
+<link rel="stylesheet" href="./css/shake.css">
+<link rel="stylesheet" href="./css/myDialog.css">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/howler.min.js"></script> 
+<script type="text/javascript" src="./js/fastclick.js"></script> 
+<script type="text/javascript" src="./js/shake.js"></script>
+<script type="text/javascript" src="./js/myDialog.js"></script>
+</head>
+<body>
+
+<table id="container">
+<tbody>
+	<tr>
+		<td class="container" colspan="2">
+			<div id="shake">
+				<img src="./images/inner.png" class="inner">
+				<img src="./images/shake.png" class="shake_up" id="shakeup">
+				<img src="./images/shake.png" class="shake_down" id="shakedown">
+			</div>
+			<div id="loading" class="loading"></div>
+		</td>
+	</tr>
+	<tr id="controlbar">
+		<td class="controlbar" onclick="javascript:shake();">
+			<img src="./images/sdy.png" width="40" height="53"><br>手动摇
+		</td>
+	</tr>
+	<tr id="cantshake" style="display:none"><td class="controlbar" colspan="2">对不起，您的手机无法支持摇一摇！</td></tr>
+</tbody>
+</table>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+</div>
+</body>
+</html>
